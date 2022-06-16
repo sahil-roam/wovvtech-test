@@ -114,13 +114,15 @@ function App(){
   }
 
   const stopTracking = () => {
-    // Roam.setForegroundNotification(false,
-    //   "Wovvtech Issue",
-    //   "Testing app",
-    //   "mipmap/ic_launcher",
-    //   "com.wovvtechissue.MainActivity",
-    //   "com.wovvtechissue.LocationService"
-    //   )
+    if(Platform.OS === 'android'){
+      Roam.setForegroundNotification(false,
+        "Wovvtech Issue",
+        "Testing app",
+        "mipmap/ic_launcher",
+        "com.wovvtechissue.MainActivity",
+        "com.wovvtechissue.LocationService"
+        )
+    }
     Roam.stopTracking();
   }
 
