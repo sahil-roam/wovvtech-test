@@ -27,16 +27,6 @@ import { useState, useEffect } from 'react';
 import Roam from 'roam-reactnative';
 
 
-export function UpdateLocation({location}){
-  console.log('update location: '+location)
-  
-  return(
-    location === undefined
-    ? <Text>Undefined</Text>
-    :
-    <Text style={styles.sectionDescription}>Location : {location}</Text>
-  );
-}
 
 function App(){
   const isDarkMode = useColorScheme() === 'dark';
@@ -46,9 +36,7 @@ function App(){
   };
 
   const [userId, setUserId] = useState('')
-  const [count, setCount] = useState(0)
   const [response, setResponse] = useState('Response: ')
-  const [location, setLocation] = useState('')
 
   useEffect(() => {
     if(Platform.OS === 'android'){
@@ -159,9 +147,6 @@ function App(){
 
         <Text style={styles.sectionDescription}>User id: {userId}</Text>
 
-        <Text style={styles.sectionDescription}>Location Count: {count}</Text>
-
-        <UpdateLocation />
 
         <Text style={styles.sectionDescription}>{response}</Text>
 

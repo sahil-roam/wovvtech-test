@@ -12,7 +12,6 @@ function registerListener(){
     console.log('index register')
     Roam.startListener('location', locations => {
         console.log(JSON.stringify(locations))
-        //UpdateLocation({location: JSON.stringify(locations)})
       })
     
 }
